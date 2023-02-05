@@ -111,5 +111,14 @@ Tested the KryptoJobs2Go application with my newly integrated Ethereum wallet fr
 	
 	
 
+https://user-images.githubusercontent.com/112692272/216811851-29798f54-a7bb-4af6-8499-1a62552772a5.mp4
+
+
+
 	- Below is the scree-recording video which shows that the transaction fails if i do not have enough ether to hire a candidate
  
+ 
+
+https://user-images.githubusercontent.com/112692272/216811855-059b915d-d4f7-4a07-a67d-7d638d9d42be.mp4
+
+
