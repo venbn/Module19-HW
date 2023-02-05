@@ -104,7 +104,12 @@ Tested the KryptoJobs2Go application with my newly integrated Ethereum wallet fr
 
 	- Below is the screen-shot of my local Ganache application which displays the Ethereum accounts with their addresses, balances and also the seed phrase 
 
+	<img width="1280" alt="Ganache" src="https://user-images.githubusercontent.com/112692272/216811633-a21d0c2e-bbc7-4997-947d-a8c3934342d7.png">
+
+
 	- Below is the screen-recording video of KryptoJobs2Go's customer web interface which shows the transaction of a successful hire of a candidate with available ether.
+	
+	
 
 	- Below is the scree-recording video which shows that the transaction fails if i do not have enough ether to hire a candidate
  
