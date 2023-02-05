@@ -115,9 +115,9 @@ https://user-images.githubusercontent.com/112692272/216811851-29798f54-a7bb-4af6
 
 
 
-	- Below is the scree-recording video which shows that the transaction fails if i do not have enough ether to hire a candidate
- 
- 
+	- Below is the scree-recording video which shows that the transaction fails if i do not have enough ether to hire a candidate.
+	  I will not be able to hire Kendell for 2000 hours or Lane for 1000 hours with the amount of ether i have
+
 
 https://user-images.githubusercontent.com/112692272/216811855-059b915d-d4f7-4a07-a67d-7d638d9d42be.mp4
 
