@@ -124,4 +124,5 @@ https://user-images.githubusercontent.com/112692272/216811855-059b915d-d4f7-4a07
 
 	- Below is the screen-shot from Ganache which shows the updated Ether balance after successful transactions were made for hiring
 	
-	<img width="1280" alt="Ganache_Balance_after_hiring" src="https://user-images.githubusercontent.com/112692272/216812173-3d7d3791-c92e-4f7f-9969-440ee5b39695.png">
+<img width="1280" alt="Ganache_Balance_after_hiring" src="https://user-images.githubusercontent.com/112692272/216812270-9b9f76c1-8fc1-43d8-a46f-97491300a062.png">
+
