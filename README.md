@@ -1,7 +1,5 @@
 ## Unit 19 Homework: Cryptocurrency Wallet
 
-![An image shows a wallet with bitcoin.](Images/19-4-challenge-image.png)
-
 ### Background
 
 You work at a startup that is building a new and disruptive platform called KryptoJobs2Go. KryptoJobs2Go is an application that its customers can use to find fintech professionals from among a list of candidates, hire them, and pay them. As KryptoJobs2Go’s lead developer, you have been tasked with integrating the Ethereum blockchain network into the application in order to enable your customers to instantly pay the fintech professionals whom they hire with cryptocurrency.
@@ -42,15 +40,17 @@ The steps for this challenge are broken out into the following sections:
 
 #### Step 1: Import Ethereum Transaction Functions into the KryptoJobs2Go Application
 
-In this section, you'll import several functions from the `crypto_wallet.py` script into the file `krypto_jobs.py`, which contains code for KryptoJobs2Go’s customer interface, in order to add wallet operations to the application. For this section, you will assume the perspective of a KryptoJobs2Go customer (i.e., you’ll provide your Ethereum wallet and account information to the application).
+Imported several functions from the `crypto_wallet.py` script into the file `krypto_jobs.py`, which contains code for KryptoJobs2Go’s customer interface, in order to add wallet operations to the application. For this section, you will assume the perspective of a KryptoJobs2Go customer (i.e., you’ll provide your Ethereum wallet and account information to the application).
 
-Complete the following steps:
+Completed the following steps:
 
-1. Review the code contained in the `crypto_wallet.py` script file. Note that the Ethereum transaction functions that you have built throughout this module&mdash;including `wallet`, `wallet.derive_acount`, `get_balance`, `fromWei`, `estimateGas`, `sendRawTransaction`, and others&mdash;have now been incorporated into Python functions that allow you to automate the process of accessing them.
+1. Reviewed the code contained in the `crypto_wallet.py` script file. Note that the Ethereum transaction functions that you have built throughout this module&mdash;including `wallet`, `wallet.derive_acount`, `get_balance`, `fromWei`, `estimateGas`, `sendRawTransaction`, and others&mdash;have now been incorporated into Python functions that allow you to automate the process of accessing them.
 
 2. Add your mnemonic seed phrase (provided by Ganache) to the starter code’s `SAMPLE.env` file. When the information has been added, rename the file `.env`.
 
-3. Open the `krypto_jobs.py` file. Toward the top of the file, after the import statements that are provided, import the following functions from the `crypto_wallet.py` file:
+Generated a new mnemonic seed phrase in my local Ganache interface and add the same to SAMPLE.env and renamed it to ".env".
+
+3. In the `krypto_jobs.py` file imported the following functions from the `crypto_wallet.py` file:
 
     * `generate_account`
 
@@ -58,17 +58,29 @@ Complete the following steps:
 
     * `send_transaction`
 
-4. Within the Streamlit sidebar section of code, create a variable named `account`. Set this variable equal to a call on the `generate_account` function. This function will create the KryptoJobs2Go customer’s (in this case, your) HD wallet and Ethereum account.
+	Added the following code block :
+
+	`from crypto_wallet import generate_account, get_balance, send_transaction`	
+	
+4. Within the Streamlit sidebar section of code, created a variable named `account`. Set this variable equal to a call on the `generate_account` function. This function will create the KryptoJobs2Go customer’s (in this case, your) HD wallet and Ethereum account.
+
+	Added the following code block :
+
+	`account = generate_account()`
 
 5. Within this same section of the `krypto_jobs.py` file, define a new `st.sidebar.write` function that will display the balance of the customer’s account. Inside this function, call the `get_balance` function and pass it your Ethereum `account.address`.
 
+	Added the following code block :
+
+	`st.sidebar.write(account.address)`
+	
 #### Step 2: Sign and Execute a Payment Transaction
 
-Next, you'll write the code that will calculate a fintech professional’s wage, in ether, based on the worker’s hourly rate and the number of hours that they work for a customer. (The fintech professionals’ hourly rates are provided in the `candidate_database` that is found in `krypto_jobs.py`.)
+The code will calculate a fintech professional’s wage, in ether, based on the worker’s hourly rate and the number of hours that they work for a customer. (The fintech professionals’ hourly rates are provided in the `candidate_database` that is found in `krypto_jobs.py`.)
 
-You will then write code that uses the calculated wage value to send a transaction that pays the worker. This code should allow the KryptoJobs2Go customer to authorize the transaction with their digital signature. For the purpose of testing out this application, you will use your own Ethereum account information as the customer account information.
+Then the code uses the calculated wage value to send a transaction that pays the worker. This code will allow the KryptoJobs2Go customer to authorize the transaction with their digital signature. For the purpose of testing out this application, i have used my own Ethereum account (from Ganache) information as the customer account information.
 
-To accomplish all of this, complete the following steps:
+To accomplish all of this, completed the following steps:
 
 1. KryptoJobs2Go customers will select a fintech professional from the application interface’s drop-down menu, and then input the amount of time for which they’ll hire the worker. Code the application so that once a customer completes these steps, the application will calculate the amount that the worker will be paid in ether. To do so, complete the following steps:
 
@@ -88,34 +100,19 @@ To accomplish all of this, complete the following steps:
 
     * Save the transaction hash that the `send_transaction` function returns as a variable named `transaction_hash`, and have it display on the application’s web interface.
 
-#### Step 3: Inspect the Transaction
+#### Step 3: Inspected the Transaction
 
-Now it's time to put it all together and test the KryptoJobs2Go application with your newly integrated Ethereum wallet. You will send a test transaction by using the application’s web interface, and then look up the resulting transaction in Ganache. To do so, complete the following steps:
+Tested the KryptoJobs2Go application with my newly integrated Ethereum wallet from Ganache. You will send a test transaction by using the application’s web interface, and then look up the resulting transaction in Ganache. To do so, complete the following steps:
 
-1. From your terminal, navigate to the project folder that contains your `.env` file and the `krypto_jobs.py` and `crypto_wallet.py` files. Be sure to activate your Conda `dev` environment if it is not already active.
+1. From my terminal, navigated to the project folder that contains the `.env` file and the `krypto_jobs.py` and `crypto_wallet.py` files in an activated conda environment with all the depndencies installed.
 
-2. To launch the Streamlit application, type `streamlit run krypto_jobs.py`.
+2. Launched the Streamlit application by executing `streamlit run krypto_jobs.py`.
 
-3. On the resulting webpage, select a candidate that you would like to hire from the appropriate drop-down menu. Then, enter the number of hours that you would like to hire them for. (Remember, you do not have a lot of ether in your account, so you cannot hire them for long!)
+3. On the resulting webpage, selected a candidate that i would like to hire from the appropriate drop-down menu. Then, entered the number of hours that i would like to hire them for and clicked the "Send Transaction" button to sign and send the transaction with my Ethereum account information.
 
-4. Click the Send Transaction button to sign and send the transaction with your Ethereum account information. Navigate to the Transactions section of Ganache.
+	- Below is the screen-shot of my local Ganache application which displays the Ethereum accounts with their addresses, balances and also the seed phrase 
 
-    * Take a screenshot of your address balance and history on Ganache. Save this screenshot to the README.md file of your GitHub repository for this Challenge assignment.
+	- Below is the screen-recording video of KryptoJobs2Go's customer web interface which shows the transaction of a successful hire of a candidate with available ether.
 
-    * Take a screenshot of the transaction details on Ganache. Save this screenshot to the README.md file of your GitHub repository for this Challenge assignment.
-
-5. Return to the original transaction, and click the transaction’s To address.
-
-* Take a screenshot of the recipient’s address balance and history from your Ganache application. Save this screenshot to the README.md file of your GitHub repository for this Challenge assignment.
-
----
-
-## Submission
-
-* Upload the files for this assignment to your GitHub repository.
-
-* Submit the link to your GitHub repo on Bootcamp Spot.
-
----
-
-© 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+	- Below is the scree-recording video which shows that the transaction fails if i do not have enough ether to hire a candidate
+ 
