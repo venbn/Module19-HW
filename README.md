@@ -2,21 +2,13 @@
 
 ### Background
 
-You work at a startup that is building a new and disruptive platform called KryptoJobs2Go. KryptoJobs2Go is an application that its customers can use to find fintech professionals from among a list of candidates, hire them, and pay them. As KryptoJobs2Go’s lead developer, you have been tasked with integrating the Ethereum blockchain network into the application in order to enable your customers to instantly pay the fintech professionals whom they hire with cryptocurrency.
+This code is for building a new and disruptive platform called KryptoJobs2Go. KryptoJobs2Go is an application that its customers can use to find fintech professionals from among a list of candidates, hire them, and pay them. As KryptoJobs2Go’s lead developer, you have been tasked with integrating the Ethereum blockchain network into the application in order to enable your customers to instantly pay the fintech professionals whom they hire with cryptocurrency.
 
-In this Challenge, you will complete the code that enables your customers to send cryptocurrency payments to fintech professionals. To develop the code and test it out, you will assume the perspective of a KryptoJobs2Go customer who is using the application to find a fintech professional and pay them for their work.
+In this Challenge, I have completed building the code that enables your customers to send cryptocurrency payments to fintech professionals.
 
-### What You're Creating
+### What was done ? 
 
-To complete this Challenge, you will use two Python files, both of which are contained in the starter folder.
-
-The first file that you will use is called `krypto_jobs.py`. It contains the code associated with the web interface of your application. The code included in this file is compatible with the Streamlit library. You will write all of your code for this Challenge in this file.
-
-The second file that you will use is called `crypto_wallet.py`. This file contains the Ethereum transaction functions that you have created throughout this module’s lessons. By using import statements, you will integrate the `crypto_wallet.py` Python script into the KryptoJobs2Go interface program that is found in the `krypto_jobs.py` file.
-
-Integrating these two files will allow you to automate the tasks associated with generating a digital wallet, accessing Ethereum account balances, and signing and sending transactions via a personal Ethereum blockchain called Ganache.
-
-Specifically, you will assume the perspective of a KryptoJobs2Go customer in order to do the following:
+Following was done to successfully build an application which will help the customers of KryptoJobs2Go to hire fintech professionals and pay them in cryptocurrency :
 
 * Generate a new Ethereum account instance by using the mnemonic seed phrase provided by Ganache.
 
@@ -28,9 +20,9 @@ Specifically, you will assume the perspective of a KryptoJobs2Go customer in ord
 
 * Review the transaction hash code associated with the validated blockchain transaction.
 
-Once you receive the transaction’s hash code, you will navigate to the Transactions section of Ganache to review the blockchain transaction details. To confirm that you have successfully created the transaction, you will save screenshots to the README.md file of your GitHub repository for this Challenge assignment.
+Once the transaction’s hash code is generated, the application can navigate to the Transactions section of Ganache to review the blockchain transaction details. 
 
-### Instructions
+### High Level steps for this challenge 
 
 The steps for this challenge are broken out into the following sections:
 
